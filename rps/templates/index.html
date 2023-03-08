@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock✊ Paer✋ Scissors✌️</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</head>
+<body>
+<form action="/rps" method="post">
+<div style="margin-top: 50px" class="ui container"></div>
+    <h1 class="ui center aligned header">Rock✊ Paper✋ Scissors✌️</h1>
+    <h2 class="ui center aligned header"><input type="radio" name="user" value="✊" value="" checked> ✊</h2>
+    <br>
+    <h2 class="ui center aligned header"><input type="radio" name="user" value="✋"> ✋</h2>
+    <br>
+    <h2 class="ui center aligned header"><input type="radio" name="user" value="✌️"> ✌️</h2>
+    <br>
+    <h2 class="ui center aligned header"><input class="ui green button" type="submit" value="PLAY" id="Submit"></h2>
+    <br>
+    <br>
+    {% for message in get_flashed_messages() %}
+        <h2 class="ui center aligned header"> {{message}} </h2>
+    {% endfor %}
+    <h2> {{message}} </h2>
+    <br>
+</div>
+</form>
+
+</body>
+</html>
